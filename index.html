@@ -1,89 +1,1149 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOADING ANIMATION</title>
-    <style>
-        .custom-font {
-                font-family: Arial, sans-serif;
-                color: #0af;
-            }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            --bg-color: radial-gradient(#003, #000);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-color);
-        }
-        .box {
-            position: relative;
-            width: 500px;
-            height: 500px;
-            display: flex;
-            justify-content: center;
-        }
-        .box span {
-            position: absolute;
-            width: 10px;
-            height: 250px;
-            background: transparent;
-            border-bottom: 40px solid transparent;
-            transform-origin: bottom;
-            transform: rotate(calc(22.5deg * var(--i)));
-        }
-        .box span::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 50px;
-            background: #0af;
-            box-shadow: 0 0 0 20px #0af;
-            border-radius: 10px;
-            animation: animate 1.5s linear infinite;
-            animation-delay: calc(0.1s * var(--i));
-        }
-        @keyframes animate {
-            0% {
-                transform: translateY(160px) rotate(-45deg);
-                filter: hue-rotate(0deg);
-            }
-            50% {
-                transform: translateY(90px);
-            }
-            100% {
-                transform: translateY(160px) rotate(-45deg);
-                filter: hue-rotate(360deg);
-            }
-            }
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="csrf_token" value="1MRtWjb3jGwGbxZNEWdQJWFGyc95HzMAX5yBDx0J"/>
+
+    <link rel="stylesheet" href="https://fegdex.com/source/fonts/fonts.css">
+    <link rel="stylesheet" href="https://fegdex.com/source/css/style.css?v=4">
+    <link rel="stylesheet" href="https://fegdex.com/source/css/media.css">
+    <link rel="stylesheet" href="https://fegdex.com/source/css/slide.css">
+    <link rel="shortcut icon" href="https://fegdex.com/source/img/fav.svg" type="image/x-icon">
+    <script src="https://fegdex.com/source/js/lottie-player.js"></script>
+
+    <title>Lewis Crypto</title>
+    <meta name="description" content="lewis Crypto is not just a cryptocurrency exchange. It's a movement of people who believe that access to cryptocurrency products should be easy.">
+    <meta name="keywords" content="Lewis Crypto, coinaps.com, crypto, cryptocurrency, exchange, bitcoin, btc, ethereum, eth, cryptoexchange, crypto wallet, trade, spot trading">
+
+    <meta property="og:title" content="Lewis Crypto" />
+    <meta property="og:description" content="Lewis Crypto is not just a cryptocurrency exchange. It's a movement of people who believe that access to cryptocurrency products should be easy." />
+    <meta property="og:url" content="https://fegdex.com" />
+
+    <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://fegdex.com">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home  • Fegdex">
+  <meta property="og:description" content="Fegdex is not just a cryptocurrency exchange. It's a movement of people who believe that access to cryptocurrency products should be easy.">
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="fegdex.com">
+  <meta property="twitter:url" content="https://fegdex.com">
+  <meta name="twitter:title" content="Home  • Fegdex">
+  <meta name="twitter:description" content="Fegdex is not just a cryptocurrency exchange. It's a movement of people who believe that access to cryptocurrency products should be easy.">
+
+
+    <link rel="modulepreload" href="https://fegdex.com/build/assets/app.7c3c19f8.js" /><link rel="modulepreload" href="https://fegdex.com/build/assets/app.1882ef2c.js" /><script type="module" src="https://fegdex.com/build/assets/app.7c3c19f8.js"></script><script type="module" src="https://fegdex.com/build/assets/app.1882ef2c.js"></script>    <!-- Livewire Styles -->
+<style >
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {
+        display: none;
+    }
+
+    [wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {
+        display:none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
 </head>
-<body>
-    <div class="box">
-        <span style="--i:0;"></span>
-        <span style="--i:1;"></span>
-        <span style="--i:2;"></span>
-        <span style="--i:3;"></span>
-        <span style="--i:4;"></span>
-        <span style="--i:5;"></span>
-        <span style="--i:6;"></span>
-        <span style="--i:7;"></span>
-        <span style="--i:8;"></span>
-        <span style="--i:9;"></span>
-        <span style="--i:10;"></span>
-        <span style="--i:11;"></span>
-        <span style="--i:12;"></span>
-        <span style="--i:13;"></span>
-        <span style="--i:14;"></span>
-        <span style="--i:15;"></span>
+
+<body class="mount ">
+
+<div class="primary-load" wire:ignore>
+    <div class="load-icon">
+        <lottie-player src="https://fegdex.com/source/img/lottie/loader.json" background="transparent" speed="1" loop autoplay></lottie-player>
     </div>
-    <p class="custom-font">LEWIS LOADING ANIMATION</p>
+</div>
+
+<div class="vis"></div>
+<div class="responsive-wrapper">
+    <div class="responsive-navigation">
+        <div class="nav-content">
+            <div class="nav-header">
+                <a href="https://fegdex.com" class="logo" aria-label="Logo"></a>
+                                <div class="nav-action">
+                    <div class="nav-types nav-type-a"></div>
+                    <div class="nav-types nav-type-b"></div>
+                </div>
+            </div>
+            <div class="nav-theme-content">
+                <div class="nav-main">
+                    <div class="nav-navigate-action">
+                        <div class="nav-theme-action">
+                            <div class="action-header">
+                                <a href="https://fegdex.com/app" class="item ds-dwnl">
+                                    <div class="action-icon download-i"></div>
+                                </a>
+                                <div class="item ds-lang">
+                                    <div class="action-icon lang-i"></div>
+                                </div>
+                                                                    <div class="item ds-notif">
+                                        <div class="action-icon notif-i"></div>
+                                    </div>
+                                    <div class="auth-user-nav ds-user">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLCkQ6miQBybW8eDhyUkAuXnkj9gd8d2DI4450olkQ7Owo=s96-c" alt="Avatar">
+                                    </div>
+                                                            </div>
+                            <div class="nav-theme-hide"></div>
+                        </div>
+                        <div class="nav-navigate">
+                            <a href="yotube.com" class="item nav-a active">
+                                <p>Home</p>
+                            </a>
+                            <a href="youtube.com" class="item nav-b ">
+                                <p>Exchange</p>
+                            </a>
+                            <a href="youtube.com" class="item nav-c ">
+                                <p>Prices</p>
+                            </a>
+                            <a href="youtube.com" class="item nav-d ">
+                                <p>Wallets</p>
+                            </a>
+                            <a href="youtube.com" class="item nav-q ">
+                                <p>Rewards</p>
+                            </a>
+                            <a href="youtube.com" class="item nav-e ">
+                                <p>Activities</p>
+                            </a>
+                            <a href="youtube.com" class="item nav-f ">
+                                <p>Blog</p>
+                            </a>
+                                                            <a href="#" class="item nav-g" onclick="Livewire.emit('openModal', 'dashboard.modals.settings')">
+                                    <p>Settings</p>
+                                </a>
+                                <a href="#" class="item nav-h" onclick="Livewire.emit('openModal', 'dashboard.modals.logout')">
+                                    <p>Log out</p>
+                                </a>
+                                                    </div>
+                    </div>
+                    <div class="nav-theme  nav-theme-auth ">
+                        <div class="auth-theme">
+                                                    </div>
+                        <label class="nav-check-theme">
+                            <input type="checkbox">
+                            <div class="theme-status"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="responsive-content">
+        <div class="responsive-head-modal">
+            <div class="container">
+                <div class="container-head-modal">
+                    <div class="modal-header lang-curr-modal">
+    <div class="modal-main-content">
+        <div class="lang-data">
+                            <a href="https://fegdex.com/language/en" class="item active">
+                    <div class="icon-lang">
+                        <img src="/source/img/flags/lang/en.svg" alt="">
+                    </div>
+                    <p>English</p>
+                </a>
+                            <a href="https://fegdex.com/language/es" class="item">
+                    <div class="icon-lang">
+                        <img src="/source/img/flags/lang/es.svg" alt="">
+                    </div>
+                    <p>Español</p>
+                </a>
+                            <a href="https://fegdex.com/language/pt" class="item">
+                    <div class="icon-lang">
+                        <img src="/source/img/flags/lang/pt.svg" alt="">
+                    </div>
+                    <p>Português</p>
+                </a>
+                            <a href="https://fegdex.com/language/zh" class="item">
+                    <div class="icon-lang">
+                        <img src="/source/img/flags/lang/zh.svg" alt="">
+                    </div>
+                    <p>中文</p>
+                </a>
+                            <a href="https://fegdex.com/language/hi" class="item">
+                    <div class="icon-lang">
+                        <img src="/source/img/flags/lang/hi.svg" alt="">
+                    </div>
+                    <p>हिन्दी</p>
+                </a>
+                            <a href="https://fegdex.com/language/ar" class="item">
+                    <div class="icon-lang">
+                        <img src="/source/img/flags/lang/ar.svg" alt="">
+                    </div>
+                    <p>العربية</p>
+                </a>
+                    </div>
+        <div wire:id="gMeN1qjpOiNDDUHu8BJ8" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;gMeN1qjpOiNDDUHu8BJ8&quot;,&quot;name&quot;:&quot;components.currency&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[&quot;currency-changed&quot;]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;cc93bddc&quot;,&quot;data&quot;:{&quot;available_currencies&quot;:[],&quot;currency&quot;:[]},&quot;dataMeta&quot;:{&quot;modelCollections&quot;:{&quot;available_currencies&quot;:{&quot;class&quot;:&quot;App\\Models\\Currency&quot;,&quot;id&quot;:[1,2,3,4,5,6,7,8,9,10,11,12,13],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null}},&quot;models&quot;:{&quot;currency&quot;:{&quot;class&quot;:&quot;App\\Models\\Currency&quot;,&quot;id&quot;:1,&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null}}},&quot;checksum&quot;:&quot;8a780bfdeb70c63d166d1e549ff2b50e35a8eb92c1b14feffc4da4874a70b01e&quot;}}" class="currency-data">
+            <a href="#" class="item active" wire:click="changeCurrency('1')">USD</a>
+            <a href="#" class="item " wire:click="changeCurrency('2')">EUR</a>
+            <a href="#" class="item " wire:click="changeCurrency('3')">CNY</a>
+            <a href="#" class="item " wire:click="changeCurrency('4')">JPY</a>
+            <a href="#" class="item " wire:click="changeCurrency('5')">AUD</a>
+            <a href="#" class="item " wire:click="changeCurrency('6')">GBP</a>
+            <a href="#" class="item " wire:click="changeCurrency('7')">AED</a>
+            <a href="#" class="item " wire:click="changeCurrency('8')">KRW</a>
+            <a href="#" class="item " wire:click="changeCurrency('9')">INR</a>
+            <a href="#" class="item " wire:click="changeCurrency('10')">CAD</a>
+            <a href="#" class="item " wire:click="changeCurrency('11')">TWD</a>
+            <a href="#" class="item " wire:click="changeCurrency('12')">TRY</a>
+            <a href="#" class="item " wire:click="changeCurrency('13')">PLN</a>
+    </div>
+
+<!-- Livewire Component wire-end:gMeN1qjpOiNDDUHu8BJ8 -->    </div>
+</div>
+                    
+                                            <div class="modal-header profile-modal">
+    <div class="modal-main-content">
+        <div class="profile-navigation">
+            <a href="#" class="item i-profile-a" onclick="Livewire.emit('openModal', 'dashboard.modals.settings')">
+                <div class="profile-nav-content">
+                    <h1>Account</h1>
+                    <p>Important account details</p>
+                </div>
+            </a>
+            <a href="#" class="item i-profile-b" onclick="Livewire.emit('openModal', 'dashboard.modals.settings', [&quot;Referrals&quot;])">
+                <div class="profile-nav-content">
+                    <h1>Referrals</h1>
+                    <p>Invite your friends and earn rewards</p>
+                </div>
+            </a>
+                        <a href="#" class="item i-profile-c" onclick="Livewire.emit('openModal', 'dashboard.modals.settings', [&quot;2FA&quot;])">
+                <div class="profile-nav-content">
+                    <h1>2FA security</h1>
+                    <p>Setup 2FA for more security</p>
+                </div>
+            </a>
+                                    <a href="#" class="item i-profile-d" onclick="Livewire.emit('openModal', 'dashboard.modals.settings', [&quot;ID&quot;])">
+                <div class="profile-nav-content">
+                    <h1>ID Verification</h1>
+                    <p>Verify to increase your limits</p>
+                </div>
+            </a>
+                        <a href="#" class="item i-profile-f" onclick="Livewire.emit('openModal', 'dashboard.modals.promocode')">
+                <div class="profile-nav-content">
+                    <h1>Voucher</h1>
+                    <p>Enjoy special bonus</p>
+                </div>
+            </a>
+            <a href="#" class="item i-profile-e" onclick="Livewire.emit('openModal', 'dashboard.modals.logout')">
+                <div class="profile-nav-content">
+                    <h1>Log out</h1>
+                    <p>Already rich? No? Stay here</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+                        <div wire:id="51bUNRmpWR3YAMNUAJ59" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;51bUNRmpWR3YAMNUAJ59&quot;,&quot;name&quot;:&quot;components.notification&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[&quot;updateNotifications&quot;,&quot;clearNotifications&quot;,&quot;createNotification&quot;,&quot;readNotification&quot;]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;236fb38c&quot;,&quot;data&quot;:{&quot;notifications&quot;:[]},&quot;dataMeta&quot;:{&quot;modelCollections&quot;:{&quot;notifications&quot;:{&quot;class&quot;:null,&quot;id&quot;:[],&quot;relations&quot;:[],&quot;connection&quot;:null,&quot;collectionClass&quot;:null}}},&quot;checksum&quot;:&quot;0da39c9474f21d927acfb57d0b173a33ceff6871e623b0012bb9b1f43af6feed&quot;}}" class="modal-header notif-modal" wire:ignore.self>
+    <div class="modal-main-content">
+        <div class="notif-items">
+                            <div class="no-notif">
+                    <p>No notifications</p>
+                </div>
+                    </div>
+
+            </div>
+</div>
+
+
+<!-- Livewire Component wire-end:51bUNRmpWR3YAMNUAJ59 -->                                    </div>
+            </div>
+        </div>
+        <div class="responsive-body-content">
+            <div class="primary-header">
+                <div class="container">
+                    <header>
+                        <div class="navigation-header">
+                            <a href="youtube.com" class="item">
+                                <p>Trade</p>
+                            </a>
+                            <a href="https://fegdex.com/prices" class="item">
+                                <p>Markets</p>
+                            </a>
+                            <a href="https://fegdex.com/buy-crypto" class="item">
+                                <p>Buy crypto</p>
+                            </a>
+                            <a href="https://fegdex.com/rewards" class="item">
+                                <p>Rewards</p>
+                            </a>
+                            <a href="https://fegdex.com/referral" class="item">
+                                <p>Referral</p>
+                            </a>
+                            <a href="https://fegdex.com/affiliate" class="item">
+                                <p>Affiliate</p>
+                            </a>
+                            <a href="https://fegdex.com/vip" class="item">
+                                <p>VIP</p>
+                            </a>
+                        </div>
+                        <div class="additional-header">
+                            <div class="action-header">
+                                <a href="https://fegdex.com/app" class="item ds-dwnl">
+                                    <div class="action-icon download-i"></div>
+                                </a>
+                                <div class="item ds-theme">
+                                    <div class="action-icon theme-type theme-ld"></div>
+                                </div>
+                                <div class="item ds-lang">
+                                    <div class="action-icon lang-i"></div>
+                                </div>
+                                                                    <div class="item  ds-notif">
+                                        <div class="action-icon notif-i"></div>
+                                    </div>
+                                                            </div>
+                                                            <div class="auth-user ds-user">
+                                    <img src="https://lh3.googleusercontent.com/a/ACg8ocLCkQ6miQBybW8eDhyUkAuXnkj9gd8d2DI4450olkQ7Owo=s96-c" alt="Avatar">
+                                </div>
+                                                    </div>
+                    </header>
+                </div>
+            </div>
+
+                <div wire:id="NE3pVHHqnfNdYyvCiitB" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;NE3pVHHqnfNdYyvCiitB&quot;,&quot;name&quot;:&quot;dashboard.home&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[&quot;echo:coins,CoinsUpdate&quot;,&quot;currency-changed&quot;]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;97cf8e07&quot;,&quot;data&quot;:{&quot;email&quot;:null,&quot;coins&quot;:[],&quot;categories&quot;:[{&quot;name&quot;:&quot;All&quot;,&quot;background&quot;:&quot;category-e&quot;,&quot;icon&quot;:&quot;source\/img\/potential-c.svg&quot;},{&quot;name&quot;:&quot;Top Gainers&quot;,&quot;background&quot;:&quot;category-b&quot;,&quot;icon&quot;:&quot;source\/img\/top-gain.svg&quot;},{&quot;name&quot;:&quot;Top Losers&quot;,&quot;background&quot;:&quot;category-c&quot;,&quot;icon&quot;:&quot;source\/img\/top-gain-b.svg&quot;},{&quot;name&quot;:&quot;Recently Added&quot;,&quot;background&quot;:&quot;category-d&quot;,&quot;icon&quot;:&quot;source\/img\/rec-add.svg&quot;}],&quot;currency&quot;:[],&quot;activeCategory&quot;:{&quot;name&quot;:&quot;All&quot;,&quot;background&quot;:&quot;category-e&quot;,&quot;icon&quot;:&quot;source\/img\/potential-c.svg&quot;}},&quot;dataMeta&quot;:{&quot;modelCollections&quot;:{&quot;coins&quot;:{&quot;class&quot;:&quot;App\\Models\\Coin&quot;,&quot;id&quot;:[1,2,3,14,15,16,17,18,19,20,21,22,23,26,27,28,29,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,48,49,50,51,52,12,13,24,25,47],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null}},&quot;models&quot;:{&quot;currency&quot;:{&quot;class&quot;:&quot;App\\Models\\Currency&quot;,&quot;id&quot;:1,&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null}}},&quot;checksum&quot;:&quot;68c8717f81fa354cce604a1067b62ee8224e40f4f3f9fc10899c9e55ec74a5a8&quot;}}" class="primary-main">
+    <div class="container">
+        <div class="primary-content">
+            <div class="primary-banner banner-type-b">
+                <div class="item">
+                    <div class="banner-info">
+                        <div class="banner-top-info">
+                            <h1>Buy & sell <br> crypto in minutes</h1>
+                            <p>Trade Bitcoin, Ethereum USDT, and the top altcoins on <br> the new era of crypto asset exchange.</p>
+                        </div>
+                        <div class="banner-action">
+                            <form class="form-started ">
+                                <input type="text" placeholder="Enter your email address" wire:model="email">
+                                <button wire:click="register" type="button" class="default-button button-b">
+                                    <p>Get Started</p>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image-banner">
+                        <img src="https://fegdex.com/source/img/home-main.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="primary-slides-line" wire:ignore>
+                <div class="slides-line-items">
+                                            <div class="item-content" wire:ignore>
+                            <a href="https://fegdex.com/blog/0-31-btc-from-fegdex" class="item">
+                                <img src="https://fegdex.com/storage/blog/hn5UTkoXvTro6aLMR0WNDDmxt6Has4vl2xudsS1P.png"
+                                     alt="">
+                            </a>
+                        </div>
+                                            <div class="item-content" wire:ignore>
+                            <a href="https://fegdex.com/blog/zero-trading-fees" class="item">
+                                <img src="https://fegdex.com/storage/blog/Zero.png"
+                                     alt="">
+                            </a>
+                        </div>
+                                            <div class="item-content" wire:ignore>
+                            <a href="https://fegdex.com/blog/affiliate-program" class="item">
+                                <img src="https://fegdex.com/storage/blog/Affilliate.png"
+                                     alt="">
+                            </a>
+                        </div>
+                                            <div class="item-content" wire:ignore>
+                            <a href="https://fegdex.com/blog/vip-program" class="item">
+                                <img src="https://fegdex.com/storage/blog/Vip.png"
+                                     alt="">
+                            </a>
+                        </div>
+                                            <div class="item-content" wire:ignore>
+                            <a href="https://fegdex.com/blog/referral-program" class="item">
+                                <img src="https://fegdex.com/storage/blog/Referral.png"
+                                     alt="">
+                            </a>
+                        </div>
+                                            <div class="item-content" wire:ignore>
+                            <a href="https://fegdex.com/blog/mobile-app" class="item">
+                                <img src="https://fegdex.com/storage/blog/App.png"
+                                     alt="">
+                            </a>
+                        </div>
+                                            <div class="item-content" wire:ignore>
+                            <a href="https://fegdex.com/blog/trading-strategies-a-comprehensive-guide" class="item">
+                                <img src="https://fegdex.com/storage/blog/Trading guide.png"
+                                     alt="">
+                            </a>
+                        </div>
+                                    </div>
+            </div>
+            
+            <div class="primary-assets">
+                <div class="assets-filter">
+                                            <div class="item active" wire:click="$set('activeCategory', 0)">
+                            <p>All</p>
+                        </div>
+                                            <div class="item " wire:click="$set('activeCategory', 1)">
+                            <p>Top Gainers</p>
+                        </div>
+                                            <div class="item " wire:click="$set('activeCategory', 2)">
+                            <p>Top Losers</p>
+                        </div>
+                                            <div class="item " wire:click="$set('activeCategory', 3)">
+                            <p>Recently Added</p>
+                        </div>
+                                    </div>
+                <div class="assets-data">
+                    <div class="asset-items">
+                                                    <div class="item gain-up">
+                                <div class="head-asset">
+                                    <div class="asset-image">
+                                        <img src="https://fegdex.com/source/img/coins/btc.svg" alt="Bitcoin">
+                                    </div>
+                                    <div class="asset-info">
+                                        <div class="top-asset-info">
+                                            <h1>Bitcoin</h1>
+                                            <p>24h</p>
+                                        </div>
+                                        <p>BTC</p>
+                                    </div>
+                                </div>
+                                <div class="body-asset">
+                                    <div class="price-info">
+                                        <div class="price-asset">
+                                            <h1>43,455.00 USD</h1>
+                                        </div>
+                                        <div class="gain-asset">
+                                            <p>1.05%</p>
+                                        </div>
+                                    </div>
+                                    <div data-coin="1" class="chart-info chart-load" wire:ignore>
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="view-asset">
+                                    <div class="default-button button-b" onclick="Livewire.emit('openModal', 'dashboard.modals.asset', [1])">
+                                        <p>View asset</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="item gain-up">
+                                <div class="head-asset">
+                                    <div class="asset-image">
+                                        <img src="https://fegdex.com/source/img/coins/eth.svg" alt="Ethereum">
+                                    </div>
+                                    <div class="asset-info">
+                                        <div class="top-asset-info">
+                                            <h1>Ethereum</h1>
+                                            <p>24h</p>
+                                        </div>
+                                        <p>ETH</p>
+                                    </div>
+                                </div>
+                                <div class="body-asset">
+                                    <div class="price-info">
+                                        <div class="price-asset">
+                                            <h1>2,329.69 USD</h1>
+                                        </div>
+                                        <div class="gain-asset">
+                                            <p>1.06%</p>
+                                        </div>
+                                    </div>
+                                    <div data-coin="2" class="chart-info chart-load" wire:ignore>
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="view-asset">
+                                    <div class="default-button button-b" onclick="Livewire.emit('openModal', 'dashboard.modals.asset', [2])">
+                                        <p>View asset</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="item gain-up">
+                                <div class="head-asset">
+                                    <div class="asset-image">
+                                        <img src="https://fegdex.com/source/img/coins/bnb.svg" alt="Binance Coin">
+                                    </div>
+                                    <div class="asset-info">
+                                        <div class="top-asset-info">
+                                            <h1>Binance Coin</h1>
+                                            <p>24h</p>
+                                        </div>
+                                        <p>BNB</p>
+                                    </div>
+                                </div>
+                                <div class="body-asset">
+                                    <div class="price-info">
+                                        <div class="price-asset">
+                                            <h1>303.20 USD</h1>
+                                        </div>
+                                        <div class="gain-asset">
+                                            <p>1.10%</p>
+                                        </div>
+                                    </div>
+                                    <div data-coin="3" class="chart-info chart-load" wire:ignore>
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="view-asset">
+                                    <div class="default-button button-b" onclick="Livewire.emit('openModal', 'dashboard.modals.asset', [3])">
+                                        <p>View asset</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="item gain-up">
+                                <div class="head-asset">
+                                    <div class="asset-image">
+                                        <img src="https://fegdex.com/source/img/coins/1inch.svg" alt="1inch Network">
+                                    </div>
+                                    <div class="asset-info">
+                                        <div class="top-asset-info">
+                                            <h1>1inch Network</h1>
+                                            <p>24h</p>
+                                        </div>
+                                        <p>1INCH</p>
+                                    </div>
+                                </div>
+                                <div class="body-asset">
+                                    <div class="price-info">
+                                        <div class="price-asset">
+                                            <h1>0.41 USD</h1>
+                                        </div>
+                                        <div class="gain-asset">
+                                            <p>1.45%</p>
+                                        </div>
+                                    </div>
+                                    <div data-coin="14" class="chart-info chart-load" wire:ignore>
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="view-asset">
+                                    <div class="default-button button-b" onclick="Livewire.emit('openModal', 'dashboard.modals.asset', [14])">
+                                        <p>View asset</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="item gain-up">
+                                <div class="head-asset">
+                                    <div class="asset-image">
+                                        <img src="https://fegdex.com/source/img/coins/aave.svg" alt="Aave">
+                                    </div>
+                                    <div class="asset-info">
+                                        <div class="top-asset-info">
+                                            <h1>Aave</h1>
+                                            <p>24h</p>
+                                        </div>
+                                        <p>AAVE</p>
+                                    </div>
+                                </div>
+                                <div class="body-asset">
+                                    <div class="price-info">
+                                        <div class="price-asset">
+                                            <h1>85.69 USD</h1>
+                                        </div>
+                                        <div class="gain-asset">
+                                            <p>1.18%</p>
+                                        </div>
+                                    </div>
+                                    <div data-coin="15" class="chart-info chart-load" wire:ignore>
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="view-asset">
+                                    <div class="default-button button-b" onclick="Livewire.emit('openModal', 'dashboard.modals.asset', [15])">
+                                        <p>View asset</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="item gain-down">
+                                <div class="head-asset">
+                                    <div class="asset-image">
+                                        <img src="https://fegdex.com/source/img/coins/amp.svg" alt="Amp">
+                                    </div>
+                                    <div class="asset-info">
+                                        <div class="top-asset-info">
+                                            <h1>Amp</h1>
+                                            <p>24h</p>
+                                        </div>
+                                        <p>AMP</p>
+                                    </div>
+                                </div>
+                                <div class="body-asset">
+                                    <div class="price-info">
+                                        <div class="price-asset">
+                                            <h1>0.00 USD</h1>
+                                        </div>
+                                        <div class="gain-asset">
+                                            <p>-0.82%</p>
+                                        </div>
+                                    </div>
+                                    <div data-coin="16" class="chart-info chart-load" wire:ignore>
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="view-asset">
+                                    <div class="default-button button-b" onclick="Livewire.emit('openModal', 'dashboard.modals.asset', [16])">
+                                        <p>View asset</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="item gain-down">
+                                <div class="head-asset">
+                                    <div class="asset-image">
+                                        <img src="https://fegdex.com/source/img/coins/ape.svg" alt="ApeCoin">
+                                    </div>
+                                    <div class="asset-info">
+                                        <div class="top-asset-info">
+                                            <h1>ApeCoin</h1>
+                                            <p>24h</p>
+                                        </div>
+                                        <p>APE</p>
+                                    </div>
+                                </div>
+                                <div class="body-asset">
+                                    <div class="price-info">
+                                        <div class="price-asset">
+                                            <h1>1.38 USD</h1>
+                                        </div>
+                                        <div class="gain-asset">
+                                            <p>-0.22%</p>
+                                        </div>
+                                    </div>
+                                    <div data-coin="17" class="chart-info chart-load" wire:ignore>
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="view-asset">
+                                    <div class="default-button button-b" onclick="Livewire.emit('openModal', 'dashboard.modals.asset', [17])">
+                                        <p>View asset</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="item gain-down">
+                                <div class="head-asset">
+                                    <div class="asset-image">
+                                        <img src="https://fegdex.com/source/img/coins/axs.svg" alt="Axie Infinity">
+                                    </div>
+                                    <div class="asset-info">
+                                        <div class="top-asset-info">
+                                            <h1>Axie Infinity</h1>
+                                            <p>24h</p>
+                                        </div>
+                                        <p>AXS</p>
+                                    </div>
+                                </div>
+                                <div class="body-asset">
+                                    <div class="price-info">
+                                        <div class="price-asset">
+                                            <h1>7.05 USD</h1>
+                                        </div>
+                                        <div class="gain-asset">
+                                            <p>-0.28%</p>
+                                        </div>
+                                    </div>
+                                    <div data-coin="18" class="chart-info chart-load" wire:ignore>
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="view-asset">
+                                    <div class="default-button button-b" onclick="Livewire.emit('openModal', 'dashboard.modals.asset', [18])">
+                                        <p>View asset</p>
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+                    <a href="https://fegdex.com/prices" class="default-button button-d">
+                        <p>Discover more asset</p>
+                    </a>
+                </div>
+            </div>
+            <div class="primary-benefits">
+                <h1>We are the most usability <br> cryptocurrency platform.</h1>
+                <p>We believe Fegdex is here to stay — and that a future worth building is one which opens its doors and invites everyone in.</p>
+                <div class="benefit-items">
+                    <div class="item">
+                        <div class="benefit-icon has-light">
+                            <lottie-player
+                                src="https://fegdex.com/source/img/lottie/design-dark.json"
+                                background="transparent" speed="1" hover></lottie-player>
+                        </div>
+                        <div class="benefit-icon light-ben">
+                            <lottie-player
+                                src="https://fegdex.com/source/img/lottie/design-light.json"
+                                background="transparent" speed="1" hover></lottie-player>
+                        </div>
+                        <div class="benefit-info">
+                            <h1>Design</h1>
+                            <p>UI design makes it easy to buy crypto. You will understand how to use our platform without much effort</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="benefit-icon has-light">
+                            <lottie-player
+                                src="https://fegdex.com/source/img/lottie/apps-dark.json"
+                                background="transparent" speed="2" hover></lottie-player>
+                        </div>
+                        <div class="benefit-icon light-ben">
+                            <lottie-player
+                                src="https://fegdex.com/source/img/lottie/apps-light.json"
+                                background="transparent" speed="2" hover></lottie-player>
+                        </div>
+                        <div class="benefit-info">
+                            <h1>Apps</h1>
+                            <p>Stay on top of the markets with the Fegdex app for Android, iOS and Windows</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="benefit-icon has-light">
+                            <lottie-player
+                                src="https://fegdex.com/source/img/lottie/community-dark.json"
+                                background="transparent" speed="2" hover></lottie-player>
+                        </div>
+                        <div class="benefit-icon light-ben">
+                            <lottie-player
+                                src="https://fegdex.com/source/img/lottie/community-light.json"
+                                background="transparent" speed="2" hover></lottie-player>
+                        </div>
+                        <div class="benefit-info">
+                            <h1>Community</h1>
+                            <p>We supports the crypto community, putting data in the hands which need it most</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="benefit-icon">
+                            <lottie-player
+                                src="https://fegdex.com/source/img/lottie/portfolio.json"
+                                background="transparent" speed="2" hover></lottie-player>
+                        </div>
+                        <div class="benefit-info">
+                            <h1>Portfolio</h1>
+                            <p>Buy and sell popular digital currencies, keep track of them in the one place</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="benefit-icon">
+                            <lottie-player
+                                src="https://fegdex.com/source/img/lottie/confidence.json"
+                                background="transparent" speed="2" hover></lottie-player>
+                        </div>
+                        <div class="benefit-info">
+                            <h1>Confidence</h1>
+                            <p>Our markets are always up to date, sparking curiosity with real-world relevance</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="benefit-icon has-light">
+                            <lottie-player
+                                src="https://fegdex.com/source/img/lottie/protection-dark.json"
+                                background="transparent" speed="2" hover></lottie-player>
+                        </div>
+                        <div class="benefit-icon light-ben">
+                            <lottie-player
+                                src="https://fegdex.com/source/img/lottie/protection-light.json"
+                                background="transparent" speed="2" hover></lottie-player>
+                        </div>
+                        <div class="benefit-info">
+                            <h1>Protection</h1>
+                            <p>For added security, store your funds in a vault with time delayed withdrawals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="primary-portfolio">
+                <div class="portfolio-info">
+                    <h3>Coming March 2024</h3>
+                    <h1>Build your crypto portfolio anywhere.</h1>
+                    <p>A powerful cryptocurrency exchange in your pocket. Buy, sell and trade crypto on the go.</p>
+                    <a href="https://fegdex.com/app" class="default-button button-b">
+                        <p>Get App</p>
+                    </a>
+                </div>
+                <div class="portfolio-app">
+                    <div class="image-port port-app-dark">
+                        <img src="https://fegdex.com/source/img/lottie/app-dark.png" />
+                    </div>
+                    <div class="image-port port-app-light">
+                        <img src="https://fegdex.com/source/img/lottie/app-light.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="primary-benefit">
+                <div class="item">
+                    <div class="image-benefit">
+                        <img src="https://fegdex.com/source/img/benefit-a.png" alt="Benefit" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="benefit-details">
+                        <h3>Become an affiliate</h3>
+                        <h1>Benefits For You</h1>
+                        <p>Referring to Fegdex is a win-win situation.</p>
+                        <div class="benef-items">
+                                                            <div class="item">
+                                    <div class="benef-item-data">
+                                        <h1>Monetize your influence</h1>
+                                    </div>
+                                </div>
+                                                            <div class="item">
+                                    <div class="benef-item-data">
+                                        <h1>Enjoy guaranteed payouts</h1>
+                                    </div>
+                                </div>
+                                                            <div class="item">
+                                    <div class="benef-item-data">
+                                        <h1>Maximize your earnings</h1>
+                                    </div>
+                                </div>
+                                                        <a href="https://fegdex.com/affiliate" class="default-button button-b">
+                                <p>Become an Affiliate</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:NE3pVHHqnfNdYyvCiitB -->
+
+                            <div class="primary-footer">
+                <div class="container">
+                  <footer>
+                      <div class="footer-navigation">
+                          <div class="item">
+                              <h1>About</h1>
+                              <div class="footer-nav-items">
+                                  <a href="https://fegdex.com/about-us" class="item">About Us</a>
+                                  <a href="https://fegdex.com/fees" class="item">Fee Rate</a>
+                                  <a href="https://docs.google.com/forms/d/1MWVL6ztsvlxUmt9k3mnKZ6VA9unHeh8Ux4PKx6LXK0I/viewform?edit_requested=true" target="_blank" class="item">Careers</a>
+                                  <a href="https://fegdex.com/blog" class="item">Blog</a>
+                              </div>
+                          </div>
+                          <div class="item">
+                              <h1>Service</h1>
+                              <div class="footer-nav-items">
+                                  <a href="https://fegdex.com/buy-crypto" class="item">Buy crypto</a>
+                                  <a href="https://fegdex.com/referral" class="item">Referral</a>
+                                  <a href="https://fegdex.com/affiliate" class="item">Affiliate</a>
+                                  <a href="https://fegdex.com/vip" class="item">VIP</a>
+                              </div>
+                          </div>
+                          
+                          <div class="item">
+                              <h1>Legal</h1>
+                              <div class="footer-nav-items">
+                                  <a href="/help/aml" target="_blank" class="item">AML&amp;CFT</a>
+                                  <a href="/help/policy" target="_blank" class="item">Privacy police</a>
+                                  <a href="/help/agreement" class="item">User Agreement</a>
+                                  <a href="/help/terms" target="_blank" class="item">Terms of service</a>
+                              </div>
+                          </div>
+                          <div class="item">
+                              <h1>Trade crypto</h1>
+                              <div class="footer-nav-items">
+                                  <a href="youtube.com?pair=BTCUSDT" class="item">BTC/USDT</a>
+                                  <a href="youtube.com?pair=ETHUSDT" class="item">ETH/USDT</a>
+                                  <a href="youtube.com?pair=BNBUSDT" class="item">BNB/USDT</a>
+                                  <a href="youtube.com?pair=TRXUSDT" class="item">TRX/USDT</a>
+                              </div>
+                          </div>
+                          <div class="item">
+                              <h1>Contact Us</h1>
+                              <div class="footer-nav-items">
+                                  <a href="/cdn-cgi/l/email-protection#5d3f282e3433382e2e1d3a38333f34293e733e3230" class="item">Business Cooperation</a>
+                                  <a href="/cdn-cgi/l/email-protection#40232f2f3025322134292f2e0027252e222934236e232f2d" class="item">Institution Cooperation</a>
+                                  <a href="/cdn-cgi/l/email-protection#2c4f595f584341495e6c4b49424e45584f024f4341" class="item">Customer Service Email</a>
+                                  <a href="/cdn-cgi/l/email-protection#ddb0b8b9b4bc9dbab8b3bfb4a9bef3beb2b0" class="item">Media support</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="footer-updates-social">
+                          <div wire:id="9wcB7Jwe0Lq1VZbA8Fgn" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;9wcB7Jwe0Lq1VZbA8Fgn&quot;,&quot;name&quot;:&quot;components.email-updates&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;467104dc&quot;,&quot;data&quot;:{&quot;email&quot;:null},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;8addad3b3506baa827f31d4941cffd1555b660fe1bc559b28fdbc84fcfb0f6b5&quot;}}" class="updates-sub">
+    <h1>Submit for updates.</h1>
+    <p>Subscribe to get update and notify our <br> exchange and products</p>
+    <form class="form-started ">
+        <input type="email" placeholder="Enter your email address" wire:model="email">
+        <button type="button" class="default-button button-b" wire:click="register">
+            <p>Submit</p>
+        </button>
+    </form>
+</div>
+
+<!-- Livewire Component wire-end:9wcB7Jwe0Lq1VZbA8Fgn -->                          <div class="social-items">
+                              <a href="https://twitter.com/fegdex" target="_blank" class="item i-social-b" aria-label="Twitter"></a>
+                              
+                          </div>
+                          <div class="message-footer">
+                              <p>© 2024 Fegdex. All Rights Reserved.</p>
+                          </div>
+                      </div>
+                  </footer>
+                </div>
+            </div>
+                    </div>
+    </div>
+</div>
+
+<div wire:id="ZBvy4Sq9hvxVqneA7cgq" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;ZBvy4Sq9hvxVqneA7cgq&quot;,&quot;name&quot;:&quot;components.alert&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[&quot;successNotify&quot;,&quot;warningNotify&quot;,&quot;errorNotify&quot;,&quot;infoNotify&quot;,&quot;closeNotify&quot;]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;f1500dd0&quot;,&quot;data&quot;:{&quot;isSuccess&quot;:false,&quot;isWarning&quot;:false,&quot;isError&quot;:false,&quot;isInfo&quot;:false,&quot;title&quot;:null,&quot;text&quot;:null},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;b4e10e67b7563605c9033c246c14f14a828cc638145d9f49405d8a7d246f1f22&quot;}}" class="responsive-alerts">
+    
+    
+    
+    </div>
+
+
+<!-- Livewire Component wire-end:ZBvy4Sq9hvxVqneA7cgq -->
+<div wire:id="lhylOo1IkMsEzVaNqCXa" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;lhylOo1IkMsEzVaNqCXa&quot;,&quot;name&quot;:&quot;livewire-ui-modal&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[&quot;openModal&quot;,&quot;destroyComponent&quot;]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;747bd853&quot;,&quot;data&quot;:{&quot;activeComponent&quot;:null,&quot;components&quot;:[]},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;8510d4a98171591a1f3d3e4eadc9003347bf04930741cf3d0b6ea49002c166df&quot;}}">
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(()=>{var t,e={331:()=>{function t(t){return function(t){if(Array.isArray(t))return e(t)}(t)||function(t){if("undefined"!=typeof Symbol&&null!=t[Symbol.iterator]||null!=t["@@iterator"])return Array.from(t)}(t)||function(t,o){if(!t)return;if("string"==typeof t)return e(t,o);var n=Object.prototype.toString.call(t).slice(8,-1);"Object"===n&&t.constructor&&(n=t.constructor.name);if("Map"===n||"Set"===n)return Array.from(t);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return e(t,o)}(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function e(t,e){(null==e||e>t.length)&&(e=t.length);for(var o=0,n=new Array(e);o<e;o++)n[o]=t[o];return n}window.LivewireUIModal=function(){return{show:!1,showActiveComponent:!0,activeComponent:!1,componentHistory:[],modalWidth:null,getActiveComponentModalAttribute:function(t){if(void 0!==this.$wire.get("components")[this.activeComponent])return this.$wire.get("components")[this.activeComponent].modalAttributes[t]},closeModalOnEscape:function(t){if(!1!==this.getActiveComponentModalAttribute("closeOnEscape")){var e=!0===this.getActiveComponentModalAttribute("closeOnEscapeIsForceful");this.closeModal(e)}},closeModalOnClickAway:function(t){!1!==this.getActiveComponentModalAttribute("closeOnClickAway")&&this.closeModal(!0)},closeModal:function(){var t=arguments.length>0&&void 0!==arguments[0]&&arguments[0],e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,o=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(!1!==this.show){if(!0===this.getActiveComponentModalAttribute("dispatchCloseEvent")){var n=this.$wire.get("components")[this.activeComponent].name;Livewire.emit("modalClosed",n)}if(!0===this.getActiveComponentModalAttribute("destroyOnClose")&&Livewire.emit("destroyComponent",this.activeComponent),e>0)for(var i=0;i<e;i++){if(o){var r=this.componentHistory[this.componentHistory.length-1];Livewire.emit("destroyComponent",r)}this.componentHistory.pop()}var s=this.componentHistory.pop();s&&!1===t&&s?this.setActiveModalComponent(s,!0):this.setShowPropertyTo(!1)}},setActiveModalComponent:function(t){var e=this,o=arguments.length>1&&void 0!==arguments[1]&&arguments[1];if(this.setShowPropertyTo(!0),this.activeComponent!==t){!1!==this.activeComponent&&!1===o&&this.componentHistory.push(this.activeComponent);var n=50;!1===this.activeComponent?(this.activeComponent=t,this.showActiveComponent=!0,this.modalWidth=this.getActiveComponentModalAttribute("maxWidthClass")):(this.showActiveComponent=!1,n=400,setTimeout((function(){e.activeComponent=t,e.showActiveComponent=!0,e.modalWidth=e.getActiveComponentModalAttribute("maxWidthClass")}),300)),this.$nextTick((function(){var o,i=null===(o=e.$refs[t])||void 0===o?void 0:o.querySelector("[autofocus]");i&&setTimeout((function(){i.focus()}),n)}))}},focusables:function(){return t(this.$el.querySelectorAll("a, button, input, textarea, select, details, [tabindex]:not([tabindex='-1'])")).filter((function(t){return!t.hasAttribute("disabled")}))},firstFocusable:function(){return this.focusables()[0]},lastFocusable:function(){return this.focusables().slice(-1)[0]},nextFocusable:function(){return this.focusables()[this.nextFocusableIndex()]||this.firstFocusable()},prevFocusable:function(){return this.focusables()[this.prevFocusableIndex()]||this.lastFocusable()},nextFocusableIndex:function(){return(this.focusables().indexOf(document.activeElement)+1)%(this.focusables().length+1)},prevFocusableIndex:function(){return Math.max(0,this.focusables().indexOf(document.activeElement))-1},setShowPropertyTo:function(t){var e=this;this.show=t,t?document.body.classList.add("overflow-y-hidden"):(document.body.classList.remove("overflow-y-hidden"),setTimeout((function(){e.activeComponent=!1,e.$wire.resetState()}),300))},init:function(){var t=this;this.modalWidth=this.getActiveComponentModalAttribute("maxWidthClass"),Livewire.on("closeModal",(function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t.closeModal(e,o,n)})),Livewire.on("activeModalComponentChanged",(function(e){t.setActiveModalComponent(e)}))}}}},754:()=>{}},o={};function n(t){var i=o[t];if(void 0!==i)return i.exports;var r=o[t]={exports:{}};return e[t](r,r.exports,n),r.exports}n.m=e,t=[],n.O=(e,o,i,r)=>{if(!o){var s=1/0;for(u=0;u<t.length;u++){for(var[o,i,r]=t[u],a=!0,c=0;c<o.length;c++)(!1&r||s>=r)&&Object.keys(n.O).every((t=>n.O[t](o[c])))?o.splice(c--,1):(a=!1,r<s&&(s=r));if(a){t.splice(u--,1);var l=i();void 0!==l&&(e=l)}}return e}r=r||0;for(var u=t.length;u>0&&t[u-1][2]>r;u--)t[u]=t[u-1];t[u]=[o,i,r]},n.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e),(()=>{var t={387:0,109:0};n.O.j=e=>0===t[e];var e=(e,o)=>{var i,r,[s,a,c]=o,l=0;if(s.some((e=>0!==t[e]))){for(i in a)n.o(a,i)&&(n.m[i]=a[i]);if(c)var u=c(n)}for(e&&e(o);l<s.length;l++)r=s[l],n.o(t,r)&&t[r]&&t[r][0](),t[r]=0;return n.O(u)},o=self.webpackChunk=self.webpackChunk||[];o.forEach(e.bind(null,0)),o.push=e.bind(null,o.push.bind(o))})(),n.O(void 0,[109],(()=>n(331)));var i=n.O(void 0,[109],(()=>n(754)));i=n.O(i)})();</script>
+        
+    <div
+            x-data="LivewireUIModal()"
+            x-init="init()"
+            x-on:close.stop="setShowPropertyTo(false)"
+            x-on:keydown.escape.window="closeModalOnEscape()"
+            x-on:keydown.tab.prevent="$event.shiftKey || nextFocusable().focus()"
+            x-on:keydown.shift.tab.prevent="prevFocusable().focus()"
+            x-show="show"
+            class="fixed inset-0 z-10 overflow-y-auto"
+            style="display: none;"
+    >
+        <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-10 text-center sm:block sm:p-0">
+            <div
+                    x-show="show"
+                    x-on:click="closeModalOnClickAway()"
+                    x-transition:enter="ease-out duration-300"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="ease-in duration-200"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                    class="fixed inset-0 transition-all transform"
+            >
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <div
+                    x-show="show && showActiveComponent"
+                    x-transition:enter="ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave="ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    x-bind:class="modalWidth"
+                    class="inline-block w-full align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-full"
+                    id="modal-container"
+            >
+                                            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:lhylOo1IkMsEzVaNqCXa -->
+<div id="event_modal" class="responsive-modal" style="display: none;">
+    <div class="modal-container min-modal">
+        <div class="modal-content banner-type">
+            <div class="hide-modal" onclick="$('#event_modal').fadeOut(1000);"></div>
+            <a href="https://fegdex.com/rewards" class="banner-modal">
+                <img src="https://fegdex.com/source/img/event-image.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="modal-body"></div>
+</div>
+
+      <div wire:id="Bn3GpmKwwWSWv19R2u36" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;Bn3GpmKwwWSWv19R2u36&quot;,&quot;name&quot;:&quot;components.widget&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;aaf0d9a9&quot;,&quot;data&quot;:{&quot;open&quot;:false,&quot;category&quot;:null,&quot;message&quot;:null,&quot;ticket&quot;:null},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;28a472d0472dccc9ca5e47cf4055d135a4e253ccda7040788165dab4d5d74772&quot;}}" class="chat-widget">
+    <div class="widget ">
+                  <div class="item active">
+              <div class="head-widget">
+                  <h1>New ticket</h1>
+                  <div class="hide-widget" wire:click="toggleOpen"></div>
+              </div>
+              <div class="body-widget">
+                  <div class="info-ticket">
+                      <div class="item">
+                          <p>Category</p>
+                          <div class="default-select wig-type">
+                              <input type="text">
+                              <div class="head-select">
+                                  <p class="time-i">Select Category...</p>
+                              </div>
+                              <div class="body-select">
+                                  
+                                  <div class="content-select">
+                                      <div class="item" wire:click="$set('category', 'Deposit')">
+                                          <p>Deposit</p>
+                                      </div>
+                                      <div class="item" wire:click="$set('category', 'Withdraw')">
+                                          <p>Withdraw</p>
+                                      </div>
+                                      <div class="item" wire:click="$set('category', 'Trade')">
+                                          <p>Trade</p>
+                                      </div>
+                                      <div class="item" wire:click="$set('category', 'Report')">
+                                          <p>Report</p>
+                                      </div>
+                                      <div class="item" wire:click="$set('category', 'Other')">
+                                          <p>Other</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item mx-item">
+                          <p>Message</p>
+                          <textarea class="default-textarea wig-type" placeholder="Your message..." wire:model="message"></textarea>
+                      </div>
+                  </div>
+              </div>
+              <div class="bottom-widget">
+                  <div class="default-button button-b" wire:click="create">
+                      <p>Start chat</p>
+                  </div>
+              </div>
+          </div>
+                    </div>
+    <div class="open-widget " wire:click="toggleOpen"></div>
+</div>
+
+
+<!-- Livewire Component wire-end:Bn3GpmKwwWSWv19R2u36 -->  
+<script src="https://fegdex.com/source/js/jquery.min.js"></script>
+<script defer src="https://fegdex.com/source/js/scroll.js"></script>
+<script src="https://fegdex.com/source/js/chart.min.js"></script>
+<script src="https://fegdex.com/source/js/slide.js"></script>
+<script src="https://fegdex.com/source/js/main.js?=4"></script>
+<script defer src="https://fegdex.com/source/js/pincode-autotab.js"></script>
+
+<!-- Alpine v3 -->
+<script defer src="https://fegdex.com/source/js/alpine.min.js"></script>
+<!-- Focus plugin -->
+<script defer src="https://fegdex.com/source/js/alpine-focus.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.load-icon').hide(500);
+        $('.primary-load').fadeOut(750);
+    });
+</script>
+
+<!-- Livewire Scripts -->
+<script >
+    console.warn("Livewire: The published Livewire assets are out of date
+ See: https://laravel-livewire.com/docs/installation/")
+</script>
+<script src="/vendor/livewire/livewire.js?id=de3fca26689cb5a39af4" data-turbo-eval="false" data-turbolinks-eval="false" ></script>
+<script data-turbo-eval="false" data-turbolinks-eval="false" >
+    if (window.livewire) {
+	    console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+	}
+
+    window.livewire = new Livewire();
+    window.livewire.devTools(true);
+    window.Livewire = window.livewire;
+    window.livewire_app_url = '';
+    window.livewire_token = '1MRtWjb3jGwGbxZNEWdQJWFGyc95HzMAX5yBDx0J';
+
+	/* Make sure Livewire loads first. */
+	if (window.Alpine) {
+	    /* Defer showing the warning so it doesn't get buried under downstream errors. */
+	    document.addEventListener("DOMContentLoaded", function () {
+	        setTimeout(function() {
+	            console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\\n\\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+	        })
+	    });
+	}
+
+	/* Make Alpine wait until Livewire is finished rendering to do its thing. */
+    window.deferLoadingAlpine = function (callback) {
+        window.addEventListener('livewire:load', function () {
+            callback();
+        });
+    };
+
+    let started = false;
+
+    window.addEventListener('alpine:initializing', function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+</script>
+
+    <script>
+        document.addEventListener('livewire:load', function () {
+            window.livewire.find('51bUNRmpWR3YAMNUAJ59').on('clearNotifications', () => {
+                $('.action-header .ds-notif').removeClass('n-read');
+            })
+
+            window.livewire.find('51bUNRmpWR3YAMNUAJ59').on('updateNotifications', () => {
+                $('.action-header .ds-notif').addClass('n-read');
+            })
+        })
+
+        function readNotification(id) {
+            if($('#not-read-' + id).length) {
+                Livewire.emit('readNotification', id);
+
+                if($('.not-read').length == 1) {
+                    $('.action-header .ds-notif').removeClass('n-read');
+                }
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener('show-notify', (event) => {
+            showNotify();
+        })
+
+        document.addEventListener('hide-notify', (event) => {
+            hideNotify();
+        })
+
+        function showNotify() {
+            $('.item-alert').fadeIn( 1000 )
+            setTimeout(() => {
+                $('.item-alert').fadeOut( 1000 )
+            }, 5000)
+        }
+
+        function hideNotify() {
+            $('.item-alert').hide( 3000 );
+        }
+
+            </script>
+<script>
+  $(document).ready(function() {
+      $('.open-widget').on('click', function() {
+        if ($(".widget-messages").length) {
+            const chat = $(".widget-messages").first();
+            chat.scrollTop(chat.prop("scrollHeight"))
+        }
+      })
+  })
+</script>
+
 </body>
+
 </html>
